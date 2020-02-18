@@ -1,0 +1,27 @@
+<div class="mt-1 container">
+  <div class="card">
+    <div class="text-center card-header">
+      <h3>PROJECTS</h3>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+<div class="card-columns wrap ">
+  <div class="card ml-2 mt-3 bg-light" *ngFor="let project of projects">
+
+    <div class="card-body ">
+      <h5 class="card-title">{{project.name}}</h5>
+      <p class="card-text">{{project.description}}</p>
+
+      <button (click)="editProject(project)" class="btn btn-sm btn-warning">EDIT</button>
+      <button (click)="deleteproject(project)" class=" ml-1 btn btn-sm btn-danger">DELETE</button>
+      <button (click)="projectdetails(project)" class="ml-1 btn btn-sm btn-info">SHOW DETAILS </button>
+      <button (click)="addEmployee(project)" class="ml-1 btn  btn-success btn-sm">ADD EMPLOYEE</button>
+    </div>
+  </div>
+
+</div>

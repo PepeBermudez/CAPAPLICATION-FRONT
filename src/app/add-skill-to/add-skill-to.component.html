@@ -1,0 +1,128 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>EMPLOYEES</h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> ID</th>
+                        <th> HIREDATE</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees">
+
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.hiredate}}</td>
+
+                        <td>
+
+                            <button (click)="deleteemployee(employee)" class="btn btn-danger">DELETE</button>
+                            <button (click)="addToProject(employee)" class="btn btn-success">ADD TO PROJECT</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h3>PROJECTS</h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> ID</th>
+                        <th> NAME</th>
+                        <th> DESCRIPTION</th>
+                        <th> START DATE</th>
+                        <th> END DATE</th>
+                        <th> EMPLOYEES</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let project of projects">
+
+                        <td>{{project.id}}</td>
+                        <td>{{project.name}}</td>
+                        <td>{{project.description}}</td>
+                        <td>{{project.startdate}}</td>
+                        <td>{{project.enddate}}</td>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th> ID EMPLOYEE</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let epp of epps">
+                                    <td>{{epp.idemployee}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <td>
+                            <button (click)="editProject(project)" class="btn btn-warning">EDIT</button>
+                            <button (click)="deleteproject(project)" class="btn btn-danger">DELETE</button>
+                            <button (click)="addEmployee(project)" class="btn btn-success">ADD EMPLOYEE</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>SKILLS</h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> ID</th>
+                        <th> NAME</th>
+                        <th> DESCRIPTION</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let skill of skills">
+
+                        <td>{{skill.id}}</td>
+                        <td>{{skill.name}}</td>
+                        <td>{{skill.description}}</td>
+                        <button (click)="addToEmployee(skill)" class="btn btn-danger">ADD TO EMPLOYEE</button>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>

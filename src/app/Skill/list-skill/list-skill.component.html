@@ -1,0 +1,21 @@
+<div class="mt-1 container">
+    <div class="card">
+        <div class="text-center card-header">
+            <h3>SKILLS</h3>
+        </div>
+   </div>
+  
+</div>
+
+<div class="card-columns wrap mr-3">
+    <div class="card ml-2 mt-3 bg-light" *ngFor="let skill of skills">
+ 
+      <div class="card-body ">
+        <h5 class="card-title">{{skill.name}}</h5>
+        <p class="card-text">{{skill.description}}</p>
+        
+        <button (click)="addToEmployee(skill)" class="btn btn-sm ml-1 btn-danger">ADD TO EMPLOYEE</button>
+        <button (click)="addToProject(skill)" class="btn btn-sm ml-1 btn-success">ADD TO PROJECT</button>
+    </div>
+    </div>
+  </div>

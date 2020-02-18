@@ -1,0 +1,28 @@
+<div class="mt-1 container">
+    <div class="card">
+        <div class="text-center card-header">
+            <h3>EMPLOYEES</h3>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+<div class="card-columns wrap mr-3">
+    <div class="card ml-2 mt-3 mr-5 bg-light" *ngFor="let employee of employees">
+
+        <div class="card-body ">
+            <h5 class="card-title">{{employee.id}}</h5>
+            <p class="card-text">FIREDATE: {{employee.hiredate}}</p>
+
+            <button (click)="deleteemployee(employee)" class="ml-2 btn btn-sm btn-danger">DELETE</button>
+            <button (click)="employee_details(employee)" class="ml-2 btn btn-sm">SHOW DETAILS</button>
+            <button (click)="addToProject(employee)" class="ml-2 btn btn-sm btn-success">ADD TO PROJECT</button>
+        </div>
+    </div>
+</div>
